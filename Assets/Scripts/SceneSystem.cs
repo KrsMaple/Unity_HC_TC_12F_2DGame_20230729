@@ -15,4 +15,5 @@ public class SceneSystem : MonoBehaviour
 		//應用_退出
 		Application.Quit();
 	}
+
 }
