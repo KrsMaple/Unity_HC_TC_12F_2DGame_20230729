@@ -1,41 +1,52 @@
-using UnityEngine;
+Ôªøusing UnityEngine;
 
 public class ControlSystem : MonoBehaviour
 {
-	[Header("≤æ∞ ≥t´◊"), Range(0, 100)]
+	[Header("ÁßªÂãïÈÄüÂ∫¶"), Range(0, 100)]
 	public float speed = 3.5f;
-	[SerializeField] private string praWalk = "∂}√ˆ®´∏Ù";
-	[Header("≠Ë≈È")]
+	[SerializeField] private string praWalk = "ÈñãÈóúËµ∞Ë∑Ø";
+	[Header("ÂâõÈ´î")]
 	public Rigidbody2D rig;
-	[Header("∞ µe§∏•Û")]
+	[Header("ÂãïÁï´ÂÖÉ‰ª∂")]
 	public Animator ani;
 
 	private void Awake()
 	{
-		//print("≥ÍøÙ®∆•Û");
+		//print("ÂñöÈÜí‰∫ã‰ª∂");
 	}
 
 	private void Start()
 	{
-		//print("∂}©l®∆•Û");
+		//print("ÈñãÂßã‰∫ã‰ª∂");
 	}
 
 	private void Update()
 	{
-		//print("ßÛ∑s®∆•Û");
+		//print("Êõ¥Êñ∞‰∫ã‰ª∂");
 		Move();
 	}
 
 	private void Move()
 	{
-		//print("≤æ∞ §§");
-		//®˙±o™±ÆaøÈ§JA°BD©Œ•™°B•k§Ë¶V¡‰
+		//print("ÁßªÂãï‰∏≠");
+		//ÂèñÂæóÁé©ÂÆ∂Ëº∏ÂÖ•A„ÄÅDÊàñÂ∑¶„ÄÅÂè≥ÊñπÂêëÈçµ
 		float xMove = Input.GetAxis("Horizontal");
 		float yMove = Input.GetAxis("Vertical");
 
 		rig.velocity = new Vector2(xMove, yMove) * speed;
 
 		ani.SetBool(praWalk, xMove != 0 || yMove != 0);
+
+		if(xMove > 0)
+		{
+			//Âè≥ÈÇä
+			transform.eulerAngles = new Vector2(0, 0);
+		}
+		else if(xMove < 0)
+		{
+			//Â∑¶ÈÇä
+			transform.eulerAngles = new Vector2(0, 180);
+		}
 	}
 }
 	
