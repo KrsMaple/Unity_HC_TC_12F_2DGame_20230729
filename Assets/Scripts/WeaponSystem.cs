@@ -24,5 +24,6 @@ public class WeaponSystem : MonoBehaviour
 
 		temp.GetComponent<Rigidbody2D>().AddForce(v2Value * transform.right + new Vector2(0, v2Value.y));
 
+		Destroy(temp, 20);
 	}
 }

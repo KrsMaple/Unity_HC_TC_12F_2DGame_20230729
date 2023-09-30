@@ -16,4 +16,4 @@ MonoBehaviour:
   speed: 3
   attack: 25
   expProbability: 2.5
-  expObject: 2.5
+  expObject: {fileID: 5179529195945441248, guid: 5d9f610e9061a1d49b84ac8aee32c9f4, type: 3}
