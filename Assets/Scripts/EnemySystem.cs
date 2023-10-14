@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class EnemySystem : MonoBehaviour
 {
@@ -8,11 +9,14 @@ public class EnemySystem : MonoBehaviour
 	public Animator ani;
 	private bool attackChack = true;
 	private string praAttack = "觸發_攻擊";
+	private DamagePlayer damagePlayr;
 	public Transform playerPoint;
 
 	private void Awake()
 	{
 		playerPoint = GameObject.Find("黑貓").transform;
+		damagePlayr = playerPoint.GetComponent<DamagePlayer>();
+		ani = GetComponent<Animator>();
 	}
 
 	private void Update()
@@ -45,6 +49,16 @@ public class EnemySystem : MonoBehaviour
 	private void Attack()
 	{
 		attackChack = false;
-		print("攻擊中~");
+		StartCoroutine(ReAttack());
+	}
+
+	private IEnumerator ReAttack() 
+	{
+		ani.SetTrigger(praAttack);
+		yield return new WaitForSeconds(data.attackDelay);
+		damagePlayr.Damage(data.attack);
+		yield return new WaitForSeconds(data.attackInterver);
+
+		attackChack = true;
 	}
 }

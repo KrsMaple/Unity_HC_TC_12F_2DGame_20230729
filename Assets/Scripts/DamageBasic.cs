@@ -7,16 +7,18 @@ public class DamageBasic : MonoBehaviour
 	public DataBasic data;
 	[Header("傷害值")]
 	public GameObject DamageObject;
-	private float hp;
+	protected float hp;
+	protected float Maxhp;
 
 	//一開始將角色資料讀出來獨立使用
 	private void Awake()
 	{
 		hp = data.hp;
+		Maxhp = hp;
 	}
 
 	//定義受傷
-	public void Damage(float damage)
+	public virtual void Damage(float damage)
 	{
 		GameObject insDamageObject = Instantiate(DamageObject, transform.position, Quaternion.identity);
 		insDamageObject.transform.GetChild(0).GetComponent<TextMeshPro>().text = damage.ToString();
