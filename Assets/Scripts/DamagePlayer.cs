@@ -11,8 +11,8 @@ public class DamagePlayer : DamageBasic
 	public ControlSystem controlSystem;
 	public override void Damage(float damage)
 	{
+		if (hp <= 0) return;
 		base.Damage(damage);
-
 		HpText.text = $"{hp} / {Maxhp}" ;
 		Imghp.fillAmount = hp / Maxhp ;
 	}
