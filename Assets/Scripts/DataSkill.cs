@@ -1,16 +1,16 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 [CreateAssetMenu(menuName = "Maple/DataSkill", fileName = "DataSkill")]
 public class DataSkill : ScriptableObject
 {
-	[Header("§Ş¯à¦WºÙ")]
+	[Header("æŠ€èƒ½åç¨±")]
 	public string SkillName;
-	[Header("§Ş¯à¹Ï®×")]
+	[Header("æŠ€èƒ½åœ–æ¡ˆ")]
 	public Sprite SkillImage;
-	[Header("§Ş¯à»¡©ú")]
+	[Header("æŠ€èƒ½èªªæ˜")]
 	public string SkillDesc;
-	[Header("§Ş¯àµ¥¯Å")]
+	[Header("æŠ€èƒ½ç­‰ç´š")]
 	public float SkillLevel;
-	[Header("§Ş¯à¯à¤O")]
+	[Header("æŠ€èƒ½èƒ½åŠ›")]
 	public float[] SkillScore;
 }

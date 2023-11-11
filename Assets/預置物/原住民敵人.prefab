@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1754088957710449745}
   - component: {fileID: 1754088957710449746}
   - component: {fileID: 1554113314}
+  - component: {fileID: 1568093460}
   m_Layer: 0
   m_Name: "\u539F\u4F4F\u6C11\u6575\u4EBA"
   m_TagString: Untagged
@@ -136,8 +137,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: 10.73
+  m_LinearDrag: 3.88
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -160,3 +161,17 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 591dd2acedf7b13428f4739fd694924d, type: 2}
   ani: {fileID: 0}
   playerPoint: {fileID: 0}
+--- !u!114 &1568093460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754088957710449747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aec437792653784f9a3ea4c9d4ca57c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 591dd2acedf7b13428f4739fd694924d, type: 2}
+  DamageObject: {fileID: 3618012381234294035, guid: c95ca519b076b9642ad1415bbeb6ddd4, type: 3}

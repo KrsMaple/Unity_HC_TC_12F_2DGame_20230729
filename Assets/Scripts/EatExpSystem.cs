@@ -1,9 +1,8 @@
-using Unity.VisualScripting;
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class EatExpSystem : MonoBehaviour
 {
-	private string ExpObject = "¸gÅç­È";
+	private string ExpObject = "ç¶“é©—å€¼";
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
 		//print(collision.name);
