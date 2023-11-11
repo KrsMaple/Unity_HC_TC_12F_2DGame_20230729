@@ -32,6 +32,7 @@ public class ExpObject : MonoBehaviour
 	{
 		transform.position = Vector3.MoveTowards(transform.position, Player_transform.position, Speed * Time.deltaTime);
 	}
+
 	public void EatExp()
 	{
 		float Eat = Vector3.Distance(transform.position, Player_transform.position);
