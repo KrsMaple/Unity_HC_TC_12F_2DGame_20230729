@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eafed9f25b68fb542ba5e87e36d3466d, type: 3}
   m_Name: "\u6280\u80FD2_\u653B\u64CA\u529B"
   m_EditorClassIdentifier: 
-  SkillName: 
-  SkillImage: {fileID: 0}
-  SkillDesc: 
+  SkillName: "\u653B\u64CA\u529B+"
+  SkillImage: {fileID: 21300000, guid: 2c309fee0b9a3384082cdf631c38cd09, type: 3}
+  SkillDesc: "\u63D0\u5347\u653B\u64CA\u529B"
   SkillLevel: 0
   SkillScore:
   - 50

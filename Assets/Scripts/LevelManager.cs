@@ -16,8 +16,15 @@ public class LevelManager : MonoBehaviour
     private int MaxLv;
     private float ExpCurrent = 0;
     private float ExpNeed = 100;
-    
-    [ContextMenu("建立經驗值需求資料")]
+
+    private SkillManager skillManager;
+	private void Awake()
+	{
+        //找到技能管理器
+        skillManager = FindObjectOfType<SkillManager>();
+	}
+
+	[ContextMenu("建立經驗值需求資料")]
     public void CreateExpData()
     {
         MaxLv = 100;
@@ -44,5 +51,8 @@ public class LevelManager : MonoBehaviour
         ExpNeed = ExpNeeds[Lv - 1];
         ExpImage.fillAmount = ExpCurrent / ExpNeed;
         textLv.text = $"Lv.{Lv}";
+
+        //呼叫技能面板
+        skillManager.levelUpShowSkillUI();
     }
 }
