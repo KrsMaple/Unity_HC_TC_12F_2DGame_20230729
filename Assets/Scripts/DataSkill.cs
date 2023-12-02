@@ -10,7 +10,9 @@ public class DataSkill : ScriptableObject
 	[Header("技能說明")]
 	public string SkillDesc;
 	[Header("技能等級")]
-	public float SkillLevel;
+	public int SkillLevel;
 	[Header("技能能力")]
 	public float[] SkillScore;
+	[Header("對應升級物件")]
+	public string nameSkillupgrad;
 }

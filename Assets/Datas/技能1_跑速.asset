@@ -15,10 +15,11 @@ MonoBehaviour:
   SkillName: "\u79FB\u52D5\u901F\u5EA6+"
   SkillImage: {fileID: 21300000, guid: 159e9d347c3128c409ef9fb55962c154, type: 3}
   SkillDesc: "\u63D0\u5347\u79FB\u52D5\u901F\u5EA6"
-  SkillLevel: 0
+  SkillLevel: 2
   SkillScore:
-  - 1.5
   - 3
-  - 4.5
   - 6
-  - 7.5
+  - 9
+  - 12
+  - 15
+  nameSkillupgrad: "\u79FB\u52D5\u901F\u5EA6\u63D0\u5347"
